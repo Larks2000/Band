@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.js"></script>
+	<title></title>
+
+</head>
+<body ng-App>
+
+	
+		<div>
+			<header>Noun</header>
+			<input ng-init="noun" ng-model='noun' type='text' placeholder='noun'/>
+
+			<h1> "The {{ + noun }} is falling!"</h1>
+			
+		</div>
+		<div>	
+			<header>Adjective</header>
+			<input ng-init="adjective" ng-model='adjective' type="text" placeholder='adjective'/>
+
+			<h1> "So {{ + adjective }} right away!"</h1>
+		</div>
+		<div>	
+			<header>Birth Year</header>
+			<input ng-init="age" ng-model='age' type="number" placeholder='birth year'/>
+
+			<h1> "You are {{ 2015 - age }} years old..."</h1>
+		</div>
+		<div>	
+			<!-- <header>Vacation</header>
+			<input ng-init="vacation" ng-model='vacation' type="text" placeholder='Yes or No'/>
+
+			<h1> {{ myBoolean ? "myBoolean is true" : "myBoolean is false" }} !"</h1> -->
+		</div>
+
+		<div ng-init="Parliament=['George Clinton', 'Boosty Collins', 'Garry Shider', 'Eddie Hazel', 'Maceo Parker', 'Fred Wesley', 'Michael Hampton', 'DeWayne McKnight']">
+
+		<h3>Parliament Funkadelic Band Members</h3>
+
+			<p ng-repeat="member in Parliament track by $index">{{ member }}</p>
+			
+
+		</div>
+
+
+	
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
